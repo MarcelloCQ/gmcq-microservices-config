@@ -1,3 +1,10 @@
-application:
-  name: taxation-service
-  environment: dev
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/MarcelloCQ/gmcq-microservices-config.git
+          default-label: develop
+          search-paths: specific/properties/{application}
+  application:
+    name: taxation-service
