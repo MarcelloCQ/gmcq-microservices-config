@@ -1,10 +1,11 @@
+server:
+  port: 8888
+
 spring:
   cloud:
     config:
       server:
         git:
           uri: https://github.com/MarcelloCQ/gmcq-microservices-config.git
-          default-label: cert
+          clone-on-start: true
           search-paths: specific/properties/{application}
-  application:
-    name: taxation-service
